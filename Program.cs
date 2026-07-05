@@ -3,8 +3,8 @@ using portfoli.Components;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+// Static server-side rendering only - no SignalR circuit, no interactive render mode.
+builder.Services.AddRazorComponents();
 
 var app = builder.Build();
 
@@ -21,7 +21,6 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
-app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+app.MapRazorComponents<App>();
 
 app.Run();

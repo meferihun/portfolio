@@ -1,20 +1,21 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<NavMenu />
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+<main>
+    @Body
+</main>
+
+<footer class="site-footer">
+    <div class="wrap footer-inner">
+        <span>&copy; @DateTime.Now.Year Ferenc Megyesi. Built with .NET &amp; Blazor.</span>
+        <div class="footer-links">
+            <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="/#top">Back to top &uarr;</a>
         </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+    </div>
+</footer>
 
 <div id="blazor-error-ui" data-nosnippet>
     An unhandled error has occurred.
