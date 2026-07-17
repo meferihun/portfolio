@@ -1,4 +1,4 @@
-namespace portfoli.Components.Pages;
+namespace Portfolio_Page.Components.Pages;
 
 public partial class Home
 {
